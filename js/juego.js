@@ -47,21 +47,20 @@ function ultimoMovimiento(direccion) {
 Existen diferentes formas de hacer este chequeo a partir de la grilla. */
 function chequearSiGano() {
     //COMPLETAR
-
+    var ganaste = true;
     for(var i=0; i<3; i++){
       for(var j=0; j<3; j++){
         if(grilla[i][j]!==grillaGanadora[i][j]){
-            return false;
+            ganaste = false;
         }
       }
     }
-    mostrarCartelGanador();
-    return true;
+    return ganaste;
  }
  // Implementar alguna forma de mostrar un cartel que avise que ganaste el juego
  function mostrarCartelGanador() {
     //COMPLETAR
-      alert('Has ganado');
+      alert('¡Felicidades, ganaste el juego!');
  }
 
 /* Función que intercambia dos posiciones en la grilla.
